@@ -12,7 +12,7 @@ class UserController extends Controller {
 
 		/*
 	 * Display the posts of a particular user
-	 *
+	 * 
 	 * @param int $id
 	 * @return Response
 	 */
@@ -24,13 +24,6 @@ class UserController extends Controller {
 		return view('home')->withPosts($posts)->withTitle($title);
 	}
 
-	// Peter
-	public function logout() {
-		Session::flush();
-
-		return redirect('/non-existing-redirect');
-		}
-
 	public function user_posts_all(Request $request)
 	{
 		//
@@ -39,7 +32,7 @@ class UserController extends Controller {
 		$title = $user->name;
 		return view('home')->withPosts($posts)->withTitle($title);
 	}
-
+	
 	public function user_posts_draft(Request $request)
 	{
 		//
@@ -52,7 +45,7 @@ class UserController extends Controller {
 	/**
 	 * profile for user
 	 */
-	public function profile(Request $request, $id)
+	public function profile(Request $request, $id) 
 	{
 		$data['user'] = User::find($id);
 		if (!$data['user'])
@@ -73,3 +66,4 @@ class UserController extends Controller {
 	}
 
 }
+

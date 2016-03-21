@@ -1,28 +1,48 @@
-# Laravel PHP Framework
+# simple Blog applicatoin in laravel
+------------
+what is application?
+* It is simple blogging app.
+* users can login/register
+* users can write/update blogs
+* users can read blogs
+* users can comment on blogs
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+Demo
+------------
+Demo is at [Show me demo](https://sweet-blog.herokuapp.com/)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+Install
+------------
+download source code and add .env file to blog directory. Config .env file as in part-1 of tutorials.
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+Tutorials
+------------
+Tutorials are on [Find All Together Website](http://www.findalltogether.com/wp/simple-blog-ap…n-in-laravel-5/)
+* [Setup database](http://www.findalltogether.com/wp/webdevelopment/framework/laravel/simple-blog-application-in-laravel-5-part-1-setup-database)
+* [Make routes and models](http://www.findalltogether.com/wp/webdevelopment/framework/laravel/simple-blog-application-in-laravel-5-part-2-routes-and-models)
+* [Controllers](http://www.findalltogether.com/wp/webdevelopment/framework/laravel/simple-blog-application-in-laravel-5-part-3-controllers)
+* [Build front end](http://www.findalltogether.com/wp/webdevelopment/framework/laravel/simple-blog-application-in-laravel-5-part-4-build-front-end)
+* [Add tinymce and Make user profile](http://www.findalltogether.com/wp/webdevelopment/framework/laravel/simple-blog-application-in-laravel-5-part-5-add-tinymce-and-user-profile)
 
-## Official Documentation
+Database tables
+------------
+* users (default + role)
+* posts (id, author, title, body, slug, published_on, last_modified, active)
+* comments (id, on_post, from_user, body, at_time)
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+Quick install without Tutorial
+------------
+If you want to skip the tutorials and get this up and running quickly, follow these instructions:
 
-## Contributing
+1.  Clone the repository
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+  git clone https://github.com/28harishkumar/blog.git [your project name]
 
-## Security Vulnerabilities
+2.  Follow the [Setup database instructions](http://www.findalltogether.com/wp/webdevelopment/framework/laravel/simple-blog-application-in-laravel-5-part-1-setup-database) which includes:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+  * Edit the .env.example file to match your database and rename to .env
+  * Set up and run the migrations
 
-## License
+3. Ensure that the permissions on the storage folder are set correctly. You will get a 500 error otherwise.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
-# test
+4. Ensure that you have set the correct image path for justboil.me to the appropriate folder or just use the default /images and make sure that folder has the correct permissions to upload images (usually owned by the webserver user).
